@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pIz-7b-d9o">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="b0a-uc-fcR">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="pIz-7b-d9o" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vuR-ia-SjL">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UWa-sC-Yat"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s32-Zv-1no" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1133" y="-314"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="DGMainViewController" id="BYZ-38-t0r" customClass="DGMainViewController" customModule="DaignalT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Daignal" translatesAutoresizingMaskIntoConstraints="NO" id="02H-2X-PG2">
+                                <rect key="frame" x="157" y="130" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="3ou-bm-AvT"/>
+                                    <constraint firstAttribute="width" constant="100" id="Ddu-30-tmp"/>
+                                    <constraint firstAttribute="height" constant="100" id="yeG-3e-TF4"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ole-bN-geJ">
+                                <rect key="frame" x="141.5" y="284.5" width="131" height="31"/>
+                                <color key="backgroundColor" red="0.9996673465" green="0.89279466870000002" blue="0.0055540478789999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go To Catalogue">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToCatalogue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gHo-cB-aI7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ole-bN-geJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="3EY-P4-NQO"/>
+                            <constraint firstItem="02H-2X-PG2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OEy-bR-9FC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ole-bN-geJ" secondAttribute="trailing" constant="25" id="Qft-Pz-x5Q"/>
+                            <constraint firstItem="02H-2X-PG2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="86" id="R3h-Lw-f4x"/>
+                            <constraint firstItem="ole-bN-geJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="frW-EY-YPj"/>
+                            <constraint firstItem="ole-bN-geJ" firstAttribute="firstBaseline" secondItem="02H-2X-PG2" secondAttribute="baseline" constant="66.5" id="kgs-aW-TTI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="BqR-5g-rtx"/>
+                    <connections>
+                        <outlet property="goToCatalogue" destination="ole-bN-geJ" id="C1i-BD-RP4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-355" y="-314"/>
+        </scene>
+        <!--Catalogue View Controller-->
+        <scene sceneID="b5N-Br-nqW">
+            <objects>
+                <viewController storyboardIdentifier="DGCatalogueViewController" id="z8D-jG-bXb" customClass="DGCatalogueViewController" customModule="DaignalT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bwb-vd-vbK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="In7-px-H4X">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="UuP-FP-NJ5">
+                                    <size key="itemSize" width="84" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="uwX-hS-d2i">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XaM-SA-cVd">
+                                            <rect key="frame" x="0.0" y="0.0" width="84" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nrB-gb-rRe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="In7-px-H4X" firstAttribute="top" secondItem="nrB-gb-rRe" secondAttribute="top" id="9qE-uG-4fP"/>
+                            <constraint firstItem="In7-px-H4X" firstAttribute="leading" secondItem="nrB-gb-rRe" secondAttribute="leading" id="9zC-te-TsV"/>
+                            <constraint firstItem="nrB-gb-rRe" firstAttribute="bottom" secondItem="In7-px-H4X" secondAttribute="bottom" id="XsQ-pN-582"/>
+                            <constraint firstItem="nrB-gb-rRe" firstAttribute="trailing" secondItem="In7-px-H4X" secondAttribute="trailing" id="vIB-aM-Q6U"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="catalogueCollectionView" destination="In7-px-H4X" id="GIt-jV-qAB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVc-3J-dyh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="354" y="-314"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Daignal" width="50" height="50"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

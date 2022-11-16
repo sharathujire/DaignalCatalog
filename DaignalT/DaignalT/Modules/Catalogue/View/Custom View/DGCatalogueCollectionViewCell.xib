@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DGCatalogueCollectionViewCell" customModule="DaignalT" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="496"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="355" height="496"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iz8-Vg-YT4">
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="496"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="EMa-dX-UzF">
+                                <rect key="frame" x="0.0" y="0.0" width="355" height="460"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uh1-uT-pZ7" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                <rect key="frame" x="0.0" y="472" width="355" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="forceScrolling" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scrollDuration">
+                                        <real key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="EMa-dX-UzF" secondAttribute="trailing" id="79k-ja-iwT"/>
+                            <constraint firstItem="EMa-dX-UzF" firstAttribute="leading" secondItem="iz8-Vg-YT4" secondAttribute="leading" id="CAw-CV-9fV"/>
+                            <constraint firstAttribute="bottom" secondItem="uh1-uT-pZ7" secondAttribute="bottom" id="CzG-WT-wNy"/>
+                            <constraint firstItem="uh1-uT-pZ7" firstAttribute="top" secondItem="EMa-dX-UzF" secondAttribute="bottom" constant="12" id="Snm-bI-WPK"/>
+                            <constraint firstItem="uh1-uT-pZ7" firstAttribute="leading" secondItem="iz8-Vg-YT4" secondAttribute="leading" id="bzC-lE-4Vn"/>
+                            <constraint firstAttribute="trailing" secondItem="uh1-uT-pZ7" secondAttribute="trailing" id="cDZ-yM-7oT"/>
+                            <constraint firstItem="EMa-dX-UzF" firstAttribute="top" secondItem="iz8-Vg-YT4" secondAttribute="top" id="udd-Fu-6dR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="iz8-Vg-YT4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2gc-mu-HS6"/>
+                <constraint firstAttribute="trailing" secondItem="iz8-Vg-YT4" secondAttribute="trailing" id="IJu-qq-0iQ"/>
+                <constraint firstItem="iz8-Vg-YT4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Oht-rJ-chB"/>
+                <constraint firstAttribute="bottom" secondItem="iz8-Vg-YT4" secondAttribute="bottom" id="iEf-DP-Gjn"/>
+            </constraints>
+            <size key="customSize" width="355" height="496"/>
+            <connections>
+                <outlet property="bgView" destination="iz8-Vg-YT4" id="dCF-2T-QeF"/>
+                <outlet property="posterImageView" destination="EMa-dX-UzF" id="3IR-Q0-xWy"/>
+                <outlet property="posterTitleLabel" destination="uh1-uT-pZ7" id="lsd-GE-17i"/>
+            </connections>
+            <point key="canvasLocation" x="-625.36231884057975" y="-260.49107142857144"/>
+        </collectionViewCell>
+    </objects>
+    <designables>
+        <designable name="uh1-uT-pZ7">
+            <size key="intrinsicContentSize" width="48" height="24"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MarqueeLabel",
+        "repositoryURL": "https://github.com/cbpowell/MarqueeLabel.git",
+        "state": {
+          "branch": "master",
+          "revision": "980925156200e94062e31db9e203f535c05b27ee",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
