@@ -3,9 +3,10 @@ DaignalCatalogue is an iOS Application -  a complete list of Films with Poster.
 
 DaignalCatalogue is used to List Films with Poster and their Title.
 
-Version List used while developing the app,
+Version List used while developing the app;
 
 Xcode: 13.0
+
 Swift: 5.0
 
 Compatibility devices: iPhone
